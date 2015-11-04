@@ -28,6 +28,10 @@ csvDownloader
   });
 ```
 
+# Dependencies
+
+file-downloader uses Fetch API and Promises. Provide appropriate polyfills if you want to support old browsers. Check browser compatibility [caniuse.com/fetch](http://caniuse.com/fetch), [caniuse.com/promises](http://caniuse.com/promises).
+
 # License
 
 MIT
