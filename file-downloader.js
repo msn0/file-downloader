@@ -9,7 +9,6 @@
       link.setAttribute("href", encodedUri);
       link.setAttribute("download", filename);
       link.click();
-
       return Promise.resolve(filename);
     }
 
