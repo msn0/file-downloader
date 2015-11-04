@@ -1,0 +1,22 @@
+{
+  "name": "file-downloader",
+  "main": "file-downloader.js",
+  "version": "1.0.0",
+  "homepage": "https://github.com/msn0/file-downloader",
+  "authors": [
+    "Michał Jezierski <ambinanitelo@gmail.com>"
+  ],
+  "description": "A fetch-based file downloader for client-side js",
+  "moduleType": [],
+  "keywords": [
+    "download"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "name": "file-downloader",
+  "version": "1.0.0",
+  "description": "A fetch-based file downloader for client-side js",
+  "main": "file-downloader.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "uglify": "./node_modules/.bin/uglifyjs file-downloader.js --mangle -o file-downloader.min.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/msn0/file-downloader.git"
+  },
+  "keywords": [
+    "download"
+  ],
+  "author": "Michał Jezierski",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/msn0/file-downloader/issues"
+  },
+  "homepage": "https://github.com/msn0/file-downloader#readme",
+  "dependencies": {
+    "uglify-js": "^2.5.0"
+  }
+}
