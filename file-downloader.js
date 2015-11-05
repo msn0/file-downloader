@@ -1,4 +1,4 @@
-(function (window) {
+(function (window, document, URL) {
   "use strict";
 
   function Downloader() {
@@ -7,6 +7,8 @@
       var link = document.createElement("a");
       link.setAttribute("href", URL.createObjectURL(blob));
       link.setAttribute("download", filename);
+      link.style.display = "none";
+      document.body.appendChild(link);
       link.click();
       return Promise.resolve(filename);
     }
@@ -30,4 +32,4 @@
 
   window.Downloader = Downloader;
 
-})(window);
+})(window, document, URL);
