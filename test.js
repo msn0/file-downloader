@@ -30,7 +30,7 @@ describe("Downloader", function () {
 
     down.get("/fooService", "foo.csv").then(function () {
       expect(el.getAttribute("download")).toBe("foo.csv");
-      expect(el.getAttribute("href")).toBe("data:text/foo;charset=utf-8,foo;bar;baz");
+      expect(/^blob:http%3A\/\//.test(el.getAttribute("href"))).toBeTruthy();
       done();
     });
   });

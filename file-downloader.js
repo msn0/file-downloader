@@ -1,32 +1,31 @@
 (function (window) {
   "use strict";
 
-  function Downloader(type) {
+  function Downloader() {
 
-    function downloadFile(filename, text) {
-      var encodedUri = encodeURI("data:" + type + ";charset=utf-8," + text);
+    function downloadFile(filename, blob) {
       var link = document.createElement("a");
-      link.setAttribute("href", encodedUri);
+      link.setAttribute("href", URL.createObjectURL(blob));
       link.setAttribute("download", filename);
       link.click();
       return Promise.resolve(filename);
     }
 
-    function getText(response) {
-      return response.text();
+    function getBlob(response) {
+      return response.blob();
     }
 
     return {
       get: function (url, filename) {
         return window.fetch(url)
-          .then(getText)
+          .then(getBlob)
           .then(downloadFile.bind(this, filename));
       }
     };
   }
 
-  Downloader.create = function (type) {
-    return new Downloader(type);
+  Downloader.create = function () {
+    return new Downloader();
   };
 
   window.Downloader = Downloader;
