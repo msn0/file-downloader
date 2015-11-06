@@ -3,7 +3,7 @@
 
   function downloadFile(filename, blob) {
     var link = document.createElement("a");
-    link.setAttribute("href", URL.createObjectURL(blob));
+    link.setAttribute("href", window.URL.createObjectURL(blob));
     link.setAttribute("download", filename);
     link.style.display = "none";
     document.body.appendChild(link);
@@ -24,4 +24,4 @@
       }
   };
 
-})(window, document, URL);
+})(window, document);
