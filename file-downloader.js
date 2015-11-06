@@ -1,4 +1,4 @@
-(function (window, document, URL) {
+(function (window, document) {
   "use strict";
 
   function downloadFile(filename, blob) {
