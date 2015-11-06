@@ -7,8 +7,8 @@ describe("Downloader", function () {
   beforeEach(function () {
     fakeFetch.install();
     doc = document;
+    down = downloader;
     el = doc.createElement("a");
-    down = Downloader.create("text/foo");
   });
 
   afterEach(function () {
