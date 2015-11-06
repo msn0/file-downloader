@@ -19,9 +19,7 @@ npm install file-downloader
 # Usage
 
 ```js
-var down = Downloader.create();
-
-down.get("/reports/myCsvReport", "report.csv")
+downloader.get("/reports/myCsvReport", "report.csv")
   .then(function (filename) {
     console.log("File " + filename + " has been downloaded!");
   });
