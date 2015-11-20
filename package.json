@@ -1,6 +1,6 @@
 {
   "name": "file-downloader",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "description": "A fetch-based file downloader for client-side js",
   "main": "file-downloader.js",
   "scripts": {
@@ -12,7 +12,9 @@
     "url": "git+https://github.com/msn0/file-downloader.git"
   },
   "keywords": [
-    "download"
+    "download",
+    "file",
+    "fetch"
   ],
   "author": "Michał Jezierski",
   "license": "MIT",
@@ -21,18 +23,14 @@
   },
   "homepage": "https://github.com/msn0/file-downloader#readme",
   "devDependencies": {
-    "babel-core": "^6.0.20",
     "fake-fetch": "^0.2.0",
     "jasmine-core": "^2.3.4",
     "karma": "^0.13.15",
-    "karma-babel-preprocessor": "^6.0.1",
     "karma-browserify": "^4.4.0",
     "karma-chrome-launcher": "^0.2.1",
-    "karma-coverage": "^0.5.3",
     "karma-jasmine": "^0.3.6",
     "karma-mocha-reporter": "^1.1.1",
     "karma-phantomjs-launcher": "^0.2.1",
-    "karma-phantomjs2-launcher": "^0.3.2",
     "phantomjs": "^1.9.18",
     "promise": "^7.0.4",
     "uglify-js": "^2.5.0"

@@ -1,4 +1,4 @@
-(function (window, document, URL) {
+(function (window, document) {
   "use strict";
 
   function downloadFile(filename, blob) {
@@ -16,9 +16,15 @@
   }
 
   window.downloader = {
-      get: function (url, filename) {
+      get: function (url, filename, headers) {
+        var options;
+        if (headers) {
+          options = {
+            headers: new Headers(headers)
+          };
+        }
         return window
-          .fetch(url)
+          .fetch(url, options)
           .then(getBlob)
           .then(downloadFile.bind(this, filename));
       }
