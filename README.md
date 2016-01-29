@@ -21,9 +21,7 @@ npm install file-downloader
 Simple download with filename:
 ```js
 downloader.get("/reports/myCsvReport", "report.csv")
-  .then(function (filename) {
-    console.log("File " + filename + " has been downloaded!");
-  });
+  .then(filename => console.log("File " + filename + " has been downloaded!"));
 ```
 
 Provide custom request headers if needed:
@@ -31,9 +29,7 @@ Provide custom request headers if needed:
 downloader.get("/reports/myCsvReport", "report.csv", {
     "Authorization": "R2l2ZSBtZSB0aGUgZmlsZSwgZGF3ZyE="
   })
-  .then(function (filename) {
-    console.log("File " + filename + " has been downloaded!");
-  });
+  .then(filename => console.log("File " + filename + " has been downloaded!"));
 ```
 
 # Dependencies
