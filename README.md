@@ -22,14 +22,14 @@ Simple download with filename:
 ```js
 downloader
   .get("/reports/myCsvReport", "report.csv")
-  .then(filename => console.log("File " + filename + " has been downloaded!"));
+  .then(filename => console.log(`File ${filename} has been downloaded!`));
 ```
 
 Provide custom request headers if needed:
 ```js
 downloader
   .get("/reports/myCsvReport", "report.csv", {"Authorization": "R2l2ZSBtZSB0aGUgZmlsZSwgZGF3ZyE="})
-  .then(filename => console.log("File " + filename + " has been downloaded!"));
+  .then(filename => console.log(`File ${filename} has been downloaded!`));
 ```
 
 # Dependencies
